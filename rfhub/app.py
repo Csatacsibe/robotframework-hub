@@ -102,8 +102,7 @@ class RobotHub(object):
 
     def _favicon(self):
         static_dir = os.path.join(self.app.root_path, 'static')
-        return flask.send_from_directory(os.path.join(self.app.root_path, 'static'),
-                                         'favicon.ico', mimetype='image/vnd.microsoft.icon')
+        return flask.send_from_directory(static_dir, 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
     def _root(self):
         return flask.redirect(self.args.root)
