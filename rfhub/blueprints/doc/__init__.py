@@ -43,6 +43,10 @@ def index():
                                    })
 
 
+@blueprint.route("/testdata/")
+def testdata():
+    return flask.render_template("testdata.html")
+
 @blueprint.route("/search/")
 def search():
     """Show all keywords that match a pattern"""
