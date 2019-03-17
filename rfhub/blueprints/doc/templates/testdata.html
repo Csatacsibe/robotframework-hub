@@ -1,14 +1,4 @@
 {% extends "twocolumn.html" %}
-{% block body %}
-<div> 
-  <script> 
-  $(function(){
-    $("#includedContent").load("../../static/testdoc.html"); 
-  });
-  </script> 
-</div>
-
-<div> 
-   <div id="includedContent"></div>
-</div> 
+{% block content %}
+    <iframe src="{{data.path}}" class="testdoc-container"></iframe>
 {% endblock %}

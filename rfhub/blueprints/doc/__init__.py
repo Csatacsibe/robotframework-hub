@@ -45,7 +45,10 @@ def index():
 
 @blueprint.route("/testdata/")
 def testdata():
-    return flask.render_template("testdata.html")
+    return flask.render_template("testdata.html",
+                                  data={"path": "../../static/testdoc.html",
+                                       "version": __version__
+                                   })
 
 @blueprint.route("/search/")
 def search():
